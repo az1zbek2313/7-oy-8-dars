@@ -3,7 +3,7 @@
   background-repeat:no-repeat;
   background-position-x: 44vw;
   background-repeat:no-repeat;
-  height: 1000px;
+  height: 800px;
 }
 .headerContainer{
   margin: 20px auto 0;
@@ -55,7 +55,7 @@
 
 
 .heroContainer{
-  margin: 100px auto 0;
+  margin: 130px auto 0;
   display: flex;
   align-items:center;
   justify-content: space-between;
