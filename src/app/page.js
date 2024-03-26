@@ -1,95 +1,54 @@
 import Image from "next/image";
+import icon from "../../public/image/icon.png";
+import iconX from "../../public/image/x-512.webp";
+import logo from "../../public/image/Logotip.svg";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+    <div className={styles.container}>
+      <header className={styles.headerContainer}>
+       <span>
+          <a href="#">
+            <Image src={logo} />
           </a>
+        </span>
+
+       <input className={styles.inputt} id="sidebar" type="checkbox"/>
+
+       <label className={styles.sidebar} htmlFor="sidebar">
+       <Image className={styles.icon} src={icon} style={{
+          width:'24px',
+          height:'24px'
+        }}/>
+       <Image className={styles.iconX} src={iconX} style={{
+          width:'24px',
+          height:'24px',
+          background:'white'
+        }}/>
+        
+       </label>
+
+        <div className={styles.logoItems}>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <a href="#" className={styles.button}>Try for Free</a>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </header>
+      <main className={styles.heroContainer}> 
+        <article className={styles.article}>
+          <h1 className={styles.title}>Discover new currency</h1>
+          <p className={styles.text}>A cryptocurrency bank account for more trusting financial transaction & more reliable currency for better future finance</p>
+          <a href="#" className={styles.button}>Try for Free</a>
+        </article>
+        {/* <Image src={dashboard} placeholder="blur" className={styles.image}/> */}
+      </main>
+    </div>
   );
 }
